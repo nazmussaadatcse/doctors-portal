@@ -17,6 +17,7 @@ const AppointmentOption = ({ appointmentOption, setTreatment }) => {
                         onClick={() => {
                             setTreatment(appointmentOption);
                             window.bookingModal.showModal();
+                            console.log()
                         }}>Book Appointment</button>
 
                 </div>

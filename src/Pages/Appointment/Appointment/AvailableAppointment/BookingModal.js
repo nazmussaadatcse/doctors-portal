@@ -27,7 +27,11 @@ const BookingModal = ({ treatment,setTreatment, selectedDate }) => {
         }
 
         console.log(booking);
-        setTreatment(null);
+        // setTreatment(null);
+
+        // alert("Booking Complete!");
+        const dialog = document.getElementById('bookingModal');
+        dialog.close();
 
     }
 
