@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 
@@ -21,7 +20,9 @@ const Login = () => {
                         </label>
                         <input type='text' 
 
-                        {...register("email",{required: "Email Address is required"})} 
+                        {...register("email",{
+                            required: "Email Address is required"
+                        })} 
                         
                         className="input input-bordered w-full max-w-xs" />
                               {errors.email && <p className='text-red-700'>{errors.email?.message}</p>}
@@ -34,7 +35,10 @@ const Login = () => {
                         </label>
                         <input type='password' 
 
-                        {...register("password",{required:"Password is required"})} 
+                        {...register("password",{
+                            required:"Password is required",
+                            minLength:{value:6, message:'6 character required'}
+                        })} 
 
                         className="input input-bordered w-full max-w-xs" />
                         <label className="label">
